@@ -67,6 +67,33 @@ footer {
     padding: 10px;
 }
 
+footer i {
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+footer a {
+  margin: 0 10px;
+  color: #000; /* change color */
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+footer a:hover {
+  color: #838383; /* change on hover */
+}
+
+footer i {
+  font-size: 24px;
+}
+footer a.youtube i {
+  color: white; /* normal color */
+}
+
+footer a.youtube:hover i {
+  color: rgb(227, 16, 16); /* turns red on hover */
+}
+
 
 
 
