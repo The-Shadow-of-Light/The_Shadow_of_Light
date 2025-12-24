@@ -1,0 +1,97 @@
+/* Reset default browser spacing */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Navigation links */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Hover effect on links */
+nav a:hover {
+    color: #6e6e6e;
+}
+
+/* button on active Tab */
+nav a.active {
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Main content area */
+main {
+    padding: 20px;
+    background-color: white;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+/* Headings */
+h2, h3 {
+    color: #000000;
+}
+
+/* List styling */
+ul {
+    list-style-type: square;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+/* Make body and html full height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Wrapper uses flex column */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main grows to fill space */
+main {
+    flex: 1;
+}
+
+/* Footer stays at bottom */
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
