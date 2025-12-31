@@ -216,10 +216,10 @@ footer p {
   display: block;
   max-height: 0;
   overflow: hidden;
-  background: #ffffff;        /* black background */
+  background: #f5f4f4;        /* black background */
   color: #000000;             /* white text */
   padding: 0 20px;         /* padding applied when open */
-transition: max-height 0.12s ease-out, padding 0.1s ease-out;
+  transition: max-height 0.12s ease-out, padding 0.1s ease-out;
   border-left: 3px solid #000000;
 }
 
