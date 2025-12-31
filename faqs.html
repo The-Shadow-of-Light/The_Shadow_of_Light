@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <title>FAQ</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="index.html">
+          <img src="images/banner.png" alt="Logo" class="logo" />
+        </a>
+      </header>
+
+      <nav>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="books.html">Books</a>
+          <a href="faqs.html" class="active">FAQ</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-socials">
+          <a
+            href="https://instagram.com/the_shadow_of_light_official"
+            target="_blank"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://patreon.com/The_AbyssWalker" target="_blank">
+            <i class="fa-brands fa-patreon"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/@The_Shadow_of_Light_Official"
+            target="_blank"
+            class="youtube"
+          >
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </nav>
+
+      <main>
+        <section class="faq-section">
+          <h1>Frequently Asked Questions</h1>
+
+          <div class="faq-item">
+            <button class="faq-question">1: When were you born?</button>
+            <div class="faq-answer">
+              <p>Not Telling.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              2: What is your favorite manga?
+            </button>
+            <div class="faq-answer">
+              <p>Berserk.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              3: What is your favorite video game?
+            </button>
+            <div class="faq-answer">
+              <p>Bloodborne, but I like all of the souls games.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              4: Why do you upload so randomly and infrequently?
+            </button>
+            <div class="faq-answer">
+              <p>
+                Well, I have a personal life, I am still studying so this leaves
+                me with little time for writing, I am sorry if you have to wait
+                a while for new chapters.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">5: Why did you start writing??</button>
+            <div class="faq-answer">
+              <p>
+                I started writing bc I could never find a novel I truly enjoyed
+                reading.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              6: Is your writing self insert Webnovel slop?
+            </button>
+            <div class="faq-answer">
+              <p>Yes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              7: Why do you use ai to proof read your work?
+            </button>
+            <div class="faq-answer">
+              <p>
+                English isn't my first language, and I have always been bad with
+                languages, as such I tend to make a lot of mistakes, yet I want
+                my readers to read the best quality writing, yet I can't afford
+                a proofreader to read my work, as such I use ai to do it for me.
+              </p>
+            </div>
+          </div>
+
+          <!-- repeat .faq-item for more questions -->
+        </section>
+      </main>
+
+      <footer>
+        <a
+          href="https://instagram.com/the_shadow_of_light_official"
+          target="_blank"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://patreon.com/The_AbyssWalker" target="_blank">
+          <i class="fa-brands fa-patreon"></i>
+        </a>
+        <a
+          href="https://www.youtube.com/@The_Shadow_of_Light_Official"
+          target="_blank"
+          class="youtube"
+        >
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <p>© 2025 The Shadow of Light</p>
+      </footer>
+    </div>
+    <script>
+      document.querySelectorAll(".faq-question").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = button.nextElementSibling;
+          answer.classList.toggle("show");
+        });
+      });
+    </script>
+  </body>
+</html>
