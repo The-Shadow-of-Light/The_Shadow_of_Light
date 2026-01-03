@@ -10,7 +10,44 @@
     />
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <title>Books</title>
+
+    <style>
+      /* Page-specific adjustments for books page */
+      .books-content {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 0 !important;
+        text-align: center;
+      }
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin: 0;
+      }
+
+      .description {
+        max-width: 800px;
+        margin: 2px 0 0 0;
+        line-height: 1.4;
+      }
+
+      /* Fade-in animation like FAQ items */
+      .fade-in-item {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .fade-in-item.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
   </head>
+
   <body>
     <div class="wrapper">
       <header>
@@ -23,7 +60,7 @@
         <div class="nav-links">
           <a href="index.html">Home</a>
           <a href="books.html" class="active">Books</a>
-          <a href="faqs.html">FAQ</a>
+          <a href="faq.html">FAQ</a>
           <a href="contact.html">Contact</a>
         </div>
 
@@ -48,12 +85,94 @@
       </nav>
 
       <main>
-        <div class="content">
-          <h2>My Books</h2>
-          <p>BOOKS</p>
-        </div>
-      </main>
+        <div class="content books-content">
+          <!-- Page Title -->
+          <h2 class="title fade-in-item">
+            <i class="fa-solid fa-yin-yang"></i>
+            The Eternal Dance of Light and Darkness
+            <i class="fa-solid fa-yin-yang"></i>
+          </h2>
 
+          <p class="description fade-in-item">
+            The Eternal Dance of Light and Darkness is the series of novels I
+            have written, they all revolve around
+            <a
+              href="https://moonlight-castle.fandom.com/wiki/Selis_Everlight"
+              target="_blank"
+              >Selis Everlight</a
+            >
+            and
+            <a
+              href="https://moonlight-castle.fandom.com/wiki/Kazimir"
+              target="_blank"
+              >Kazimir</a
+            >, about how their souls are connected, about how they are destined
+            to meet each other in every universe.
+          </p>
+
+          <!-- Books Container -->
+          <div class="books-list">
+            <!-- Book 1 -->
+            <div class="book-item fade-in-item">
+              <a
+                href="https://moonlight-castle.fandom.com/wiki/Moonlight_Castle_Novel"
+                target="_blank"
+                class="book-link"
+              >
+                <img
+                  src="images/moonlightcastle.png"
+                  alt="Moonlight Castle Cover"
+                  class="book-cover"
+                />
+              </a>
+
+              <div class="book-text">
+                <a
+                  href="https://moonlight-castle.fandom.com/wiki/Moonlight_Castle_Novel"
+                  target="_blank"
+                  class="book-link"
+                >
+                  <h3>Moonlight Castle</h3>
+                </a>
+                <p>
+                  In this thrilling start, Selis Everlight and Kazimir meet for
+                  the first time, their fates intertwining across realms and
+                  realities.
+                </p>
+              </div>
+            </div>
+
+            <!-- Book 2 -->
+<div class="book-item fade-in-item">
+  <a
+    href="https://the-abysswalkers.fandom.com/wiki/The_Abysswalkers_Wiki"
+    target="_blank"
+    class="book-link"
+  >
+    <img
+      src="images/voidbound.png"
+      alt="Void Bound Cover"
+      class="book-cover"
+    />
+  </a>
+
+  <div class="book-text">
+    <a
+      href="https://the-abysswalkers.fandom.com/wiki/The_Abysswalkers_Wiki"
+      target="_blank"
+      class="book-link"
+    >
+      <h3>Void Bound</h3>
+    </a>
+    <p>
+      The story continues as their souls keep finding each other,
+      facing challenges that span multiple universes and destinies.
+    </p>
+  </div>
+</div>
+
+      </main>
+ 
       <footer>
         <a
           href="https://instagram.com/the_shadow_of_light_official"
@@ -74,5 +193,16 @@
         <p>© 2025 The Shadow of Light</p>
       </footer>
     </div>
+
+    <script>
+      // Animate title and description like FAQ items
+      window.addEventListener("load", () => {
+        document.querySelectorAll(".fade-in-item").forEach((el, i) => {
+          setTimeout(() => {
+            el.classList.add("show");
+          }, i * 200); // stagger fade-in like FAQ questions
+        });
+      });
+    </script>
   </body>
 </html>

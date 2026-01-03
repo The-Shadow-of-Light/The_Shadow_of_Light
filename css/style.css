@@ -5,7 +5,7 @@ html, body {
     height: 100%;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    color: #333;
+    color: #000000;
 }
 
 /* Wrapper flex column */
@@ -19,7 +19,7 @@ html, body {
 header {
     background-color: #fff;
     text-align: center;
-    padding: 0; /* no space between banner and nav */
+    padding: 0; 
 }
 
 header .logo {
@@ -33,7 +33,7 @@ header .logo {
 nav {
     background-color: #000;
     display: flex;
-    justify-content: center; /* center main links */
+    justify-content: center; 
     align-items: flex-start;
     padding: 10px 20px;
     position: relative;
@@ -66,12 +66,12 @@ nav {
     position: absolute;
     right: 20px;
     display: flex;
-    gap: 25px;       /* more space between icons */
+    gap: 25px;       
 }
 
 .nav-socials a {
     color: white;
-    font-size: 26px; /* slightly bigger icons */
+    font-size: 26px; 
     text-decoration: none;
 }
 
@@ -87,8 +87,8 @@ nav {
 main {
     flex: 1;
     display: flex;
-    justify-content: center; /* center horizontally */
-    align-items: flex-start;    /* center vertically */
+    justify-content: center; 
+    align-items: flex-start;    
     padding: 20px;
     margin: 15px;
     background-color: white;
@@ -99,19 +99,19 @@ main {
 main .content {
     display: flex;
     align-items: center;
-    gap: 60px; /* increased space between image & text */
+    gap: 60px; 
 }
 
 /* Image */
 main .content img {
-    max-width: 300px; /* bigger image */
+    max-width: 300px; 
     height: auto;
 }
 
 /* Text container */
 main .content .text {
-    max-width: 500px; /* wider text area */
-    font-size: 18px;  /* bigger text */
+    max-width: 500px; 
+    font-size: 18px;  
 }
 
 /* Headings */
@@ -183,23 +183,19 @@ footer p {
     transform: translateX(0); 
     opacity: 1; 
 }
-/* FAQ */
 
 /* FAQ */
-
 .faq-section {
   max-width: 800px;
-  margin: 0 auto;   /* horizontal only */
+  margin: 0 auto;   
   padding: 20px;
 }
-
-
 
 .faq-question {
   width: 100%;
   text-align: left;
-  background: #7a7a7a;        /* black box */
-  color: #000000;             /* white text */
+  background: #7a7a7a;        
+  color: #000000;             
   border: none;
   padding: 15px 20px;
   font-size: 18px;
@@ -208,18 +204,17 @@ footer p {
 }
 
 .faq-question:hover {
-  background: #949494;        /* slight hover effect */
+  background: #949494;        
 }
 
-/* Answer container (no layout jump) */
 .faq-answer {
   display: block;
   max-height: 0;
   overflow: hidden;
-  background: #f5f4f4;        /* black background */
-  color: #000000;             /* white text */
-  padding: 0 20px;         /* padding applied when open */
-  transition: max-height 0.12s ease-out, padding 0.1s ease-out;
+  background: #f5f4f4;        
+  color: #000000;             
+  padding: 0 20px;         
+  transition: max-height 0.2s ease-out, padding 0.2s ease-out;
   border-left: 3px solid #000000;
 }
 
@@ -227,15 +222,113 @@ footer p {
   margin: 10px 0;
 }
 
-/* When open */
-.faq-answer.show {
-  max-height: 300px;       /* adjust if needed */
+/* This class is toggled via JS to open the box */
+.faq-answer.active {
+  max-height: 500px;       
   padding: 10px 20px;
 }
 
-/* FAQ END*/
+/* FAQ item entrance animation */
+.faq-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Used for the entrance animation only */
+.faq-item.entry-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.description a {
+    color: #696969;      /* grey color */
+    text-decoration: none; /* remove underline */
+}
+
+.description a:hover {
+    color: #333;      /* slightly darker on hover */
+    text-decoration: underline; /* optional */
+}
 
 
+/* Books container overrides */
+.books-list {
+  display: flex;              /* row layout */
+  flex-wrap: wrap;            /* allow wrapping on small screens */
+  gap: 40px;                  /* space between books */
+  margin-top: 30px;
+  justify-content: center;    /* center books horizontally */
+}
 
+.book-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: left;
+  flex: 1 1 400px;           /* grow/shrink, minimum 400px per book */
+  max-width: 500px;
+}
 
-/* FAQ */
+.book-cover {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.book-text h3 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+}
+
+.book-text p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Fade-in animation (already exists) */
+.fade-in-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.1s ease, transform 0.1s ease;
+}
+
+.fade-in-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 768px) {
+  .book-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-cover {
+    width: 120px;
+  }
+}
+
+.book-cover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-link:hover .book-cover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.book-link {
+  text-decoration: none;
+  color: #000000; /* grey */
+}
+
+.book-link:hover {
+  color: #525252; /* darker grey on hover */
+}
+
+.book-link img {
+  cursor: pointer;
+}
